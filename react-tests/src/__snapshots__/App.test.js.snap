@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app test renders button 1`] = `
+<button>
+  count is 
+  0
+</button>
+`;
