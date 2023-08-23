@@ -12,7 +12,7 @@ describe('app test', () => {
 
     test('renders button', () => {
         render(<App/>)
-        const btn = screen.getByRole('button')
+        const btn = screen.getByTestId('increment-button')
         expect(btn).toHaveTextContent('count is')
         expect(btn).toMatchSnapshot()
         screen.debug()

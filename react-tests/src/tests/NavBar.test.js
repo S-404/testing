@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
-import { renderWithRouter } from './helpers/renderWithRouter.js'
+import { renderWithRouterAndProvider } from './helpers/renderWithRouterAndProvider.js'
 
 describe('navbar', () => {
     test('pages links', async () => {
 
-        renderWithRouter()
+        renderWithRouterAndProvider()
 
         const mainLink = screen.getByTestId('main-link')
         const aboutLink = screen.getByTestId('about-link')
