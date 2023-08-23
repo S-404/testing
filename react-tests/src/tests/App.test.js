@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import App from './App.jsx'
+import App from '../components/App.jsx'
 import '@testing-library/jest-dom'
 
 
