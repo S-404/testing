@@ -1,22 +1,17 @@
 import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import MainPage from '../pages/mainPage.jsx'
 import AboutPage from '../pages/aboutPage.jsx'
 import UsersPage from '../pages/usersPage.jsx'
 import AppPage from '../pages/appPage.jsx'
 import NotFoundPage from '../pages/notFoundPage.jsx'
 import UserInfo from '../components/userInfo/UserInfo.jsx'
+import NavBar from '../components/NavBar/NavBar.jsx'
 
 const AppRouter = () => {
     return (
         <>
-            <div style={{display:"flex", flexDirection:"column" , marginBottom: "20px"}}>
-                <Link data-testid="main-link" to={'/'} >main</Link>
-                <Link data-testid="about-link" to={'/about'} >about</Link>
-                <Link data-testid="users-link" to={'/users'} >users</Link>
-                <Link data-testid="app-link" to={'/app'} >app</Link>
-            </div>
-
+            <NavBar/>
             <Routes>
                 <Route path={'/'} element={<MainPage/>}/>
                 <Route path={'/about'} element={<AboutPage/>}/>
@@ -26,6 +21,7 @@ const AppRouter = () => {
                 <Route path={'*'} element={<NotFoundPage/>}/>
             </Routes>
         </>
+
     )
 }
 
